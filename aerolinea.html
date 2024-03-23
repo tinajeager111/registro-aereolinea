@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPRAR BOLETOS</title>
+     <style>
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: Montserrat-Regular, sans-serif;
+}
+
+a {
+    font-family: Montserrat-Regular;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666666;
+    margin: 0px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+}
+
+a:focus {
+    outline: none !important;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #57b846;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+}
+
+p {
+    font-family: Montserrat-Regular;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666666;
+    margin: 0px;
+}
+
+ul,
+li {
+    margin: 0px;
+    list-style-type: none;
+}
+
+input, select {
+    outline: none;
+    border: none;
+}
+
+
+select:focus
+input:focus {
+    border-color: transparent !important;
+}
+
+input, select :focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+input, select :focus:-moz-placeholder {
+    color: transparent;
+}
+
+input, select :focus::-moz-placeholder {
+    color: transparent;
+}
+
+input, select :focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+
+input, select::-webkit-input-placeholder {
+    color: #aaaaaa;
+}
+
+input, select:-moz-placeholder {
+    color: #aaaaaa;
+}
+
+input, select::-moz-placeholder {
+    color: #aaaaaa;
+}
+
+input, select:-ms-input-placeholder {
+    color: #aaaaaa;
+}
+
+/*---------------------------------------------*/
+button {
+    outline: none !important;
+    border: none;
+    background: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+iframe {
+    border: none !important;
+}
+
+
+
+.bg-contact100 {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.container-contact100 {
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: rgba(77, 121, 202, 0.9);
+}
+
+.wrap-contact100 {
+    width: 1163px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 110px 130px 157px 148px;
+}
+
+/*------------------------------------------------------------------
+[  ]*/
+.contact100-pic {
+    width: 310px;
+    padding-top: 55px;
+}
+
+.contact100-pic img {
+    max-width: 100%;
+}
+
+
+.contact100-form {
+    width: 390px;
+}
+
+.contact100-form-title {
+    display: block;
+    font-family: Montserrat-ExtraBold;
+    font-size: 24px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: left;
+    padding-bottom: 36px;
+}
+
+.contact100-form-title-2 {
+    display: block;
+    font-family: Montserrat-ExtraBold;
+    font-size: 19px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: left;
+    margin: 20px;
+}
+
+input.input100 {
+    height: 50px;
+    border-radius: 10px;
+    padding: 0 30px 0 50px;
+}
+
+input.input100[name="email"] {
+    padding: 0 30px 0 54px;
+}
+
+select.input100 {
+    height: 50px;
+    border-radius: 10px;
+    padding: 0 30px 0 50px;
+}
+
+select.input100[name="email"] {
+    padding: 0 30px 0 54px;
+}
+
+.wrap-input100 {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 10px;
+}
+
+.input100 {
+    display: block;
+    width: 100%;
+    background: #e6e6e6;
+    font-family: Montserrat-Bold;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666666;
+}
+
+
+.focus-input100 {
+    display: block;
+    position: absolute;
+    border-radius: 25px;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 0px 0px;
+    color: rgba(102, 72, 201, 0.5);
+}
+
+.input100:focus+.focus-input100 {
+    -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
+    animation: anim-shadow 0.5s ease-in-out forwards;
+}
+
+@-webkit-keyframes anim-shadow {
+    to {
+        box-shadow: 0px 0px 60px 25px;
+        opacity: 0;
+    }
+}
+
+@keyframes anim-shadow {
+    to {
+        box-shadow: 0px 0px 60px 25px;
+        opacity: 0;
+    }
+}
+
+.symbol-input100 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    border-radius: 25px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 30px;
+    pointer-events: none;
+    color: #aaaaaa;
+    font-size: 15px;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.input100:focus+.focus-input100+.symbol-input100 {
+    color: #846add;
+    padding-left: 22px;
+}
+
+.container-contact100-form-btn {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.contact100-form-btn {
+    width: 70%;
+    height: 50px;
+    border-radius: 10px;
+    background: #846add;
+    font-family: Montserrat-Bold;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.contact100-form-btn:hover {
+    background: #333333;
+}
+
+
+@media (max-width: 1200px) {
+    .contact100-pic {
+        width: 33.5%;
+    }
+
+    .contact100-form {
+        width: 44%;
+    }
+}
+
+@media (max-width: 992px) {
+    .wrap-contact100 {
+        padding: 110px 80px 157px 90px;
+    }
+
+    .contact100-pic {
+        width: 35%;
+    }
+
+    .contact100-form {
+        width: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrap-contact100 {
+        padding: 110px 80px 157px 80px;
+    }
+
+    .contact100-pic {
+        display: none;
+    }
+
+    .contact100-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .wrap-contact100 {
+        padding: 110px 15px 157px 15px;
+    }
+}
+
+
+
+.validate-input {
+    position: relative;
+}
+
+.alert-validate::before {
+    content: attr(data-validate);
+    position: absolute;
+    max-width: 70%;
+    background-color: white;
+    border: 1px solid #c80000;
+    border-radius: 13px;
+    padding: 4px 25px 4px 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 8px;
+    pointer-events: none;
+
+    font-family: Montserrat-Medium;
+    color: #c80000;
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: left;
+
+    visibility: hidden;
+    opacity: 0;
+
+    -webkit-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
+    -moz-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+}
+
+.alert-validate::after {
+    content: "\f06a";
+    font-family: FontAwesome;
+    display: block;
+    position: absolute;
+    color: #c80000;
+    font-size: 15px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 13px;
+}
+
+.alert-validate:hover:before {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media (max-width: 992px) {
+    .alert-validate::before {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.same-date {
+    cursor:not-allowed !important
+}
+
+
+.alerta{
+  padding: .5rem 0;
+  border-radius: .5rem;
+  text-align: center;
+  margin: auto;
+  width: 400px;
+  color: white;
+  margin-top: 1rem;
+  background-color: red;
+}
+
+.agregar{
+  padding: .5rem 0;
+  border-radius: .5rem;
+  text-align: center;
+  margin: auto;
+  width: 240px;
+
+  margin-top: 1rem;
+  background-color: rgb(58, 204, 53);
+}
+
+.alerta p {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 700; 
+  color: white;
+}
+
+.agregar p {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 700; 
+   color: white;
+}
+
+.notificacion {
+  left: 50%;
+  top:40%;
+}
+
+    </style>
+</head>
+<body>
+
+
+    <div class="bg-contact100">
+        <div class="container-contact100">
+            <div class="wrap-contact100">
+                <div class="contact100-pic" data-tilt>
+                    <img src="/modulo 3/aerolineaJS/img/avion.jpg" alt="IMG">
+                </div>
+
+                <form id="form" class="contact100-form validate-form">
+                    <span class="contact100-form-title">
+                        COMPRA TU BOLETO DE AVION
+                    </span>
+
+                    <div class="wrap-input100 validate-input" data-validate="Name is required">
+                        <input class="input100" id="nombre" type="text" name="name" placeholder="Nombre">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                        <input class="input100" id="email" type="text" name="email" placeholder="Email">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate="Message is required">
+                       <select id="ORIGEN" name="pais-origen" class="input100">
+                        <option vallue="">Pais de origen</option>
+                       </select>
+                       <span class="focus-input100"></span>
+                       <span class="symbol-input100">
+                           <i class="fa fa-envelope" aria-hidden="true"></i>
+                       </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Message is required">
+                        <select id="DESTINO" name="pais-destino" class="input100">
+                            <option vallue="">Pais de destino</option>
+                        </select>
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>
+                     </div>
+                        <span class="contact100-form-title-2">
+                                                    Boletos adultos
+                                                </span>
+                     <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                        <input class="input100" type="number" min="0" max="10"  id="cantidad-adultos">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                        <span class="contact100-form-title-2">
+                                                    Boletos niños
+                                                </span>
+                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                        
+                        <input class="input100" type="number" min="0" max="10" id="cantidad-niños">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                      <span class="contact100-form-title-2">
+                            Fecha de salida
+                        </span>
+                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                       
+                        <input class="input100" type="date" id="fecha-ida">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>     
+                  
+                    </div>
+
+                      <span class="contact100-form-title-2">
+                            Fecha de regreso
+                        </span>
+                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                      
+                        <input class="input100" type="date" id="fecha-vuelta" >
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>    
+                    </div>
+
+                    <div id="notificacion"></div>
+
+                    <div class="container-contact100-form-btn">
+                     
+                        <input class="contact100-form-btn" id="btn" type="submit" value="COMPRAR">
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="aerolinea.js"></script>
+</body>
+</html>
